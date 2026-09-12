@@ -9,3 +9,6 @@ npm-debug.log*
 .vercel
 next-env.d.ts
 *.tsbuildinfo
+
+# Kaynak video (islenmis kopyasi public/logo-animasyon.mp4)
+/logo animasyon.mp4

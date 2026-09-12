@@ -94,7 +94,25 @@ app/
   icon.svg            # favicon
   robots.ts / sitemap.ts
   api/subscribe/      # bekleme listesi kaydı (Supabase)
-  components/         # Logo, NeckPillow (SVG ürün çizimi), Icons, NotifyForm
+  components/         # Logo, LogoVideo, Icons, NotifyForm
+public/
+  logo-animasyon.mp4  # hero'daki marka animasyonu
+  logo-animasyon-poster.jpg
+```
+
+### Hero animasyonu hakkında
+
+`public/logo-animasyon.mp4`, kök dizindeki `logo animasyon.mp4` dosyasından üretildi:
+ses kanalı çıkarıldı, `faststart` eklendi ve zemindeki beyaz tam beyaza çekildi
+(`colorlevels=rimax=0.96:gimax=0.94:bimax=0.92`). Video sayfada `mix-blend-darken`
+ile gösterildiği için bu sayede kendi arka planı tamamen kaybolur, animasyon krem
+zeminin üzerinde duruyormuş gibi görünür. Videoyu değiştirirseniz aynı işlemi
+tekrarlayın, yoksa köşeli bir kutu olarak görünür:
+
+```bash
+ffmpeg -i "yeni video.mp4" -an \
+  -vf "format=rgb24,colorlevels=rimax=0.96:gimax=0.94:bimax=0.92,format=yuv420p" \
+  -c:v libx264 -crf 20 -preset slow -movflags +faststart public/logo-animasyon.mp4
 ```
 
 ### Marka renkleri

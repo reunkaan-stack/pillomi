@@ -1,5 +1,5 @@
 import { Logo, LogoMark } from "./components/Logo";
-import { NeckPillow } from "./components/NeckPillow";
+import { LogoVideo } from "./components/LogoVideo";
 import { NotifyForm } from "./components/NotifyForm";
 import {
   FeatherIcon,
@@ -52,14 +52,15 @@ const careSteps = [
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      {/* Arka plan lekeleri */}
+      {/* Arka plan lekeleri — video alanının arkası düz krem kalsın diye
+          sol tarafta tutuluyor, aksi halde videonun kendi zemini kutu gibi görünüyor. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-40 -top-48 h-[34rem] w-[34rem] rounded-full bg-orange/10 blur-3xl"
+        className="pointer-events-none absolute -left-64 -top-40 h-[34rem] w-[34rem] rounded-full bg-orange/10 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-52 top-64 h-[30rem] w-[30rem] rounded-full bg-plum/10 blur-3xl"
+        className="pointer-events-none absolute -left-52 top-72 h-[30rem] w-[30rem] rounded-full bg-plum/10 blur-3xl"
       />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 sm:px-8">
@@ -110,21 +111,15 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Ürün görseli */}
+          {/* Marka animasyonu */}
           <div className="relative mx-auto w-full max-w-md">
-            <div className="relative rounded-[2.5rem] bg-cream-deep/70 px-6 py-10 shadow-[0_30px_80px_-40px_rgba(61,20,48,0.55)]">
-              <NeckPillow className="float-soft mx-auto w-full max-w-sm" />
+            <LogoVideo className="relative mx-auto w-full max-w-sm mix-blend-darken" />
 
-              <span className="absolute -left-3 top-8 -rotate-6 rounded-full bg-orange px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-wide text-white shadow-lg sm:-left-6">
-                Makinada yıkanabilir
-              </span>
-              <span className="absolute -right-2 bottom-10 rotate-3 rounded-full bg-white px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-wide text-plum shadow-lg sm:-right-5">
-                28 × 28 × 10 cm
-              </span>
-            </div>
-
-            <p className="mt-7 text-center font-script text-2xl leading-snug text-ink">
+            <p className="mt-2 text-center font-script text-2xl leading-snug text-ink">
               <span className="swash">Ne kadar yolculuk o kadar rahatlık!</span>
+            </p>
+            <p className="mt-6 text-balance text-center text-[0.7rem] font-medium uppercase tracking-[0.1em] text-ink-soft sm:tracking-[0.16em]">
+              28 × 28 × 10 cm · Polar kumaş · Klipsli kayış
             </p>
           </div>
         </section>
