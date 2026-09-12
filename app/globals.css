@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fbf6f0;
+  --color-cream-deep: #f3e9dd;
+  --color-ink: #17161a;
+  --color-ink-soft: #5d5a63;
+  --color-plum: #5a1f47;
+  --color-plum-light: #7c2c63;
+  --color-plum-deep: #3d1430;
+  --color-orange: #f26a21;
+  --color-orange-soft: #ffe2d2;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-caveat), "Segoe Script", cursive;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Turuncu el cizimi alti cizgi - gorsellerdeki swash */
+.swash {
+  position: relative;
+  display: inline-block;
+}
+.swash::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  bottom: -0.12em;
+  height: 0.09em;
+  border-radius: 999px;
+  background: var(--color-orange);
+  transform: rotate(-0.6deg);
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-1.2deg);
+  }
+}
+.float-soft {
+  animation: float-soft 7s ease-in-out infinite;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-soft,
+  .rise {
+    animation: none;
+  }
+}
