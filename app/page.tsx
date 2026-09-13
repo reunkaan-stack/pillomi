@@ -4,6 +4,7 @@ import { NotifyForm } from "./components/NotifyForm";
 import {
   FeatherIcon,
   HandWashIcon,
+  HeartIcon,
   InstagramIcon,
   MailIcon,
   PlaneIcon,
@@ -202,29 +203,43 @@ export default function Home() {
         </section>
 
         {/* ---------- Footer ---------- */}
-        <footer className="flex flex-col items-center gap-6 py-12 sm:flex-row sm:justify-between">
-          <Logo tagline />
-          <div className="flex items-center gap-5 text-ink-soft">
+        <footer className="py-12">
+          <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+            <Logo tagline />
+            <div className="flex items-center gap-5 text-ink-soft">
+              <a
+                href="https://instagram.com/pillomi"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Pillomi Instagram"
+                className="transition hover:text-orange"
+              >
+                <InstagramIcon className="h-5 w-5" />
+              </a>
+              <a
+                href="mailto:info@pillomi.com"
+                aria-label="Pillomi e-posta"
+                className="transition hover:text-orange"
+              >
+                <MailIcon className="h-5 w-5" />
+              </a>
+            </div>
+            <p className="text-xs text-ink-soft">
+              © {new Date().getFullYear()} Pillomi. Tüm hakları saklıdır.
+            </p>
+          </div>
+
+          <div className="mt-9 border-t border-ink/5 pt-7 text-center">
             <a
-              href="https://instagram.com/pillomi"
+              href="https://karasteknoloji.com"
               target="_blank"
               rel="noreferrer noopener"
-              aria-label="Pillomi Instagram"
-              className="transition hover:text-orange"
+              className="group inline-flex items-center gap-2 text-xs font-medium text-ink-soft transition hover:text-ink"
             >
-              <InstagramIcon className="h-5 w-5" />
-            </a>
-            <a
-              href="mailto:info@pillomi.com"
-              aria-label="Pillomi e-posta"
-              className="transition hover:text-orange"
-            >
-              <MailIcon className="h-5 w-5" />
+              Karas Teknoloji
+              <HeartIcon className="h-3.5 w-3.5 text-orange transition group-hover:scale-110" />
             </a>
           </div>
-          <p className="text-xs text-ink-soft">
-            © {new Date().getFullYear()} Pillomi. Tüm hakları saklıdır.
-          </p>
         </footer>
       </div>
     </main>

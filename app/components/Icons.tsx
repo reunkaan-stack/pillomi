@@ -78,6 +78,14 @@ export function InstagramIcon({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
+export function HeartIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+      <path d="M12 20.3c-.3 0-.6-.1-.8-.3l-7-6.5A5.4 5.4 0 0 1 2.5 9.3 5.1 5.1 0 0 1 7.6 4c1.7 0 3.3.8 4.4 2.1A5.6 5.6 0 0 1 16.4 4a5.1 5.1 0 0 1 5.1 5.3 5.4 5.4 0 0 1-1.7 4.2l-7 6.5c-.2.2-.5.3-.8.3Z" />
+    </svg>
+  );
+}
+
 export function CheckIcon({ className = "h-4 w-4" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} {...base} strokeWidth={2.4}>
