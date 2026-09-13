@@ -66,7 +66,7 @@ export default function Home() {
       <div className="relative mx-auto w-full max-w-6xl px-6 sm:px-8">
         {/* ---------- Header ---------- */}
         <header className="flex items-center justify-between py-7">
-          <Logo tagline />
+          <Logo tagline priority />
           <span className="hidden items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-4 py-2 text-xs font-medium tracking-wide text-ink-soft backdrop-blur sm:inline-flex">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange opacity-75" />
@@ -183,7 +183,7 @@ export default function Home() {
             className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-orange/25 blur-3xl"
           />
           <div className="relative">
-            <LogoMark className="mx-auto h-12 w-auto text-orange" />
+            <LogoMark className="mx-auto h-14 w-auto" light />
             <h2 className="mt-7 text-3xl font-bold tracking-[-0.03em] sm:text-4xl">
               Yakında açılıyoruz
             </h2>
